@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #0a0a0c;
+    color: #f0e6d2;
+  }
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive, sans-serif;
+}
+
+.font-romantic {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Film grain texture overlay */
+.grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  pointer-events: none;
+  background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+  z-index: 25;
+}
+
+/* Immersive radial canvas background */
+.bg-immersive {
+  background-color: #0a0a0c;
+  background-image: radial-gradient(circle at center, #1a1a24 0%, #0a0a0c 100%);
+}
+
+/* Thread subtle champagne/gold glowing path */
+.thread-path {
+  filter: drop-shadow(0 0 3px rgba(255, 230, 200, 0.45)) drop-shadow(0 0 8px rgba(212, 175, 55, 0.25));
+}
+
+.thread-glow {
+  filter: drop-shadow(0 0 3px rgba(240, 230, 210, 0.6)) drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
+}
+
+.thread-glow-strong {
+  filter: drop-shadow(0 0 4px rgba(255, 240, 220, 0.8)) drop-shadow(0 0 14px rgba(212, 175, 55, 0.5));
+}
+
+.lyric-text {
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.25), 0 0 24px rgba(212, 175, 55, 0.15);
+}
+
+.text-glow {
+  text-shadow: 0 0 12px rgba(255, 245, 230, 0.35), 0 0 24px rgba(212, 175, 55, 0.15);
+}
+
+.text-glow-highlight {
+  text-shadow: 0 0 10px rgba(255, 245, 220, 0.8), 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+/* Custom subtle animations */
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(0.5deg);
+  }
+}
+
+.animate-subtle-float {
+  animation: subtle-float 6s ease-in-out infinite;
+}
+
+@keyframes gentle-sway {
+  0%, 100% {
+    transform: rotate(-1.5deg);
+  }
+  50% {
+    transform: rotate(1.5deg);
+  }
+}
+
+.animate-gentle-sway {
+  animation: gentle-sway 4s ease-in-out infinite;
+}
+

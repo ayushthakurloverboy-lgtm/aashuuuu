@@ -1,0 +1,6 @@
+{
+  "name": "For Vagmii",
+  "description": "A romantic, mobile-first interactive experience featuring hand-drawn thread animations and Secret Door for Vagmii.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
